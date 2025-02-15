@@ -1,21 +1,17 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["lib/**", "storybook-static/**"]
+      "outputs": ["dist/**"]
     },
-    "build:type": {
-      "dependsOn": ["^build:type"],
-      "outputs": ["lib/**", "storybook-static/**"]
+    "build:storybook": {
+      "dependsOn": ["^build:storybook"],
+      "outputs": ["storybook-static/**"]
     },
-    "lint": {},
     "dev": {
       "cache": false,
       "persistent": true
-    },
-    "clean": {
-      "cache": false
     }
   }
 }

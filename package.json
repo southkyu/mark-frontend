@@ -1,9 +1,9 @@
 {
-  "name": "mark-frontend",
+  "name": "@mark/frontend",
   "version": "0.0.0",
   "engines": {
-    "node": ">= 16",
-    "pnpm": ">= 7"
+    "node": ">= 18",
+    "pnpm": ">= 9"
   },
   "workspaces": [
     "packages/*"
@@ -13,10 +13,17 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "add": "turbo gen workspace --type packages",
+    "changeset": "changeset"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.8",
     "turbo": "latest"
-  }
+  },
+  "packageManager": "pnpm@9.12.3"
 }

@@ -1,0 +1,15 @@
+{
+  "name": "@mark/prettier-config",
+  "version": "0.0.0",
+  "description": "Mark prettier config",
+  "license": "MIT",
+  "main": "prettierrc.js",
+  "private": true,
+  "scripts": {
+    "lint": "npm run prettier",
+    "prettier": "prettier '**/*' --check"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}

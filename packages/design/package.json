@@ -1,0 +1,49 @@
+{
+  "name": "@southkyu/design",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "UI 컴포넌트",
+  "engines": {
+    "node": ">= 18",
+    "pnpm": ">= 8"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "storybook dev -p 6006",
+    "build:storybook": "storybook build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
+    "@mark/prettier-config": "workspace:*",
+    "@storybook/addon-essentials": "^8.4.2",
+    "@storybook/addon-interactions": "^8.4.2",
+    "@storybook/addon-onboarding": "^8.4.2",
+    "@storybook/blocks": "^8.4.2",
+    "@storybook/react": "^8.4.2",
+    "@storybook/react-vite": "^8.4.2",
+    "@storybook/test": "^8.4.2",
+    "@types/react": "^19.0.8",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.4.2"
+  },
+  "prettier": "@mark/prettier-config",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
